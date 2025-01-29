@@ -1,0 +1,432 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Estilo del contenedor principal */
+.contenedor-panel, .contenedor-login {
+    display: flex;
+    height: 100vh;
+}
+
+/* Barra lateral */
+.barra-lateral {
+    width: 20%;
+    background-color: #2c3e50;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.encabezado-barra {
+    text-align: center;
+}
+
+.encabezado-barra h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.navegacion-barra ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navegacion-barra li {
+    margin: 10px 0;
+}
+
+.navegacion-barra a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navegacion-barra a:hover {
+    background-color: #34495e;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    flex: 1;
+    background-color: #ecf0f1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.encabezado-principal {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.encabezado-principal h1 {
+    color: #e74c3c;
+    font-size: 2.5em;
+}
+
+/* Horarios */
+.seccion-informacion {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+
+
+/* Pestañas */
+.pestanas {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pestanas button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.pestanas button.activo {
+    background-color: #c0392b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pestanas button:hover {
+    background-color: #d35400;
+}
+
+/* Tabla de horarios */
+.tabla-horario {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-horario thead {
+    background-color: #e74c3c;
+    color: white;
+    text-align: left;
+}
+
+.tabla-horario thead th {
+    padding: 12px;
+    font-size: 1em;
+}
+
+.tabla-horario tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.tabla-horario tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Última fila sin borde inferior */
+.tabla-horario tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+    .pestanas {
+        flex-wrap: wrap;
+    }
+
+    .pestanas button {
+        flex: 1;
+        margin-bottom: 10px;
+    }
+
+    .tabla-horario tbody td {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
+
+/* Formulario */
+.seccion-formulario {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grupo-campo {
+    margin-bottom: 15px;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.grupo-campo input, 
+.grupo-campo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.grupo-checkbox label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.btn-enviar {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #c0392b;
+}
+
+/* Sección de bienvenida en login */
+.seccion-bienvenida {
+    width: 70%;
+    background-color: #2c3e50;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.seccion-bienvenida h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.seccion-bienvenida p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.iconos-redes a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.iconos-redes img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Formulario de login */
+.seccion-login {
+    width: 50%;
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.seccion-login form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.seccion-login form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.grupo-campo input {
+    width: calc(100% - 20px);
+}
+
+.recordar-campo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #c0392b;
+}
+
+.olvido-contrasena {
+    display: block;
+    text-align: center;
+    color: #3498db;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.olvido-contrasena:hover {
+    text-decoration: underline;
+}
+
+.texto-terminos {
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.texto-terminos a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* General */
+.informacion-estudiante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Tarjeta del estudiante */
+.tarjeta-estudiante {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tarjeta-estudiante img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #e74c3c;
+}
+
+.tarjeta-estudiante h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.tarjeta-estudiante p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.tarjeta-estudiante ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tarjeta-estudiante ul li {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Botones de acción */
+.botones-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.botones-acciones button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botones-acciones button:hover {
+    background-color: #c0392b;
+}
+
+.botones-acciones button:active {
+    transform: scale(0.98);
+}
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+    .informacion-estudiante {
+        padding: 15px;
+    }
+
+    .tarjeta-estudiante img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .botones-acciones button {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+}

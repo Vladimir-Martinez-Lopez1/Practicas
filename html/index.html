@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Escolar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="contenedor-panel">
+        <!-- Barra Lateral para los elementos que pondremos mas tarde, reportes, calendarios, citatorios-->
+        <aside class="barra-lateral">
+            <div class="encabezado-barra">
+                <h2>Escuela Secundaria Téc. 66</h2>
+                <p>Administrador</p>
+            </div>
+            <nav class="navegacion-barra">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="estudiante.php">Historial</a></li>
+                    <li><a href="reportes.php">Reportes</a></li>
+                    <li><a href="trabajo-social.php">Trabajo Social</a></li>
+                    <li><a href="horarios.php">Horarios</a></li>
+                    <li><a href="login.html">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido Principal que se mostrara en la parte central -->
+        <main class="contenido-principal">
+            <!-- Encabezado -->
+            <header class="encabezado-principal">
+                <h1>Panel Escolar</h1>
+                <p>Instituto Estatal de Educación Pública de Oaxaca</p>
+            </header>
+
+            <!-- Sección Formulario -->
+            <section class="seccion-formulario">
+                <form>
+                    <div class="grupo-campo">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="alumno">Nombre del Alumno:</label>
+                        <input type="text" id="alumno" name="alumno" placeholder="Ingrese el nombre del alumno">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="grado">Grado:</label>
+                        <select id="grado" name="grado">
+                            <option value="1">1°</option>
+                            <option value="2">2°</option>
+                            <option value="3">3°</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="grupo">Grupo:</label>
+                        <select id="grupo" name="grupo">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="motivo">Motivo:</label>
+                        <input type="text" id="motivo" name="motivo" placeholder="Ingrese el motivo">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label>Materias:</label>
+                        <div class="grupo-checkbox">
+                            <label><input type="checkbox" name="materia" value="Español"> Español</label>
+                            <label><input type="checkbox" name="materia" value="Matemáticas"> Matemáticas</label>
+                            <label><input type="checkbox" name="materia" value="Inglés"> Inglés</label>
+                            <label><input type="checkbox" name="materia" value="Ciencias"> Ciencias</label>
+                            <label><input type="checkbox" name="materia" value="Sociales"> Sociales</label>
+                            <label><input type="checkbox" name="materia" value="Artes"> Artes</label>
+                            <label><input type="checkbox" name="materia" value="E. Física"> E. Física</label>
+                            <label><input type="checkbox" name="materia" value="Tecnología"> Tecnología</label>
+                        </div>
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label>Firmas:</label>
+                        <div class="grupo-checkbox">
+                            <label><input type="checkbox" name="firma" value="Padre o Tutor"> Padre o Tutor</label>
+                            <label><input type="checkbox" name="firma" value="Trabajo Social"> Trabajo Social</label>
+                            <label><input type="checkbox" name="firma" value="Subdirección"> Subdirección</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
